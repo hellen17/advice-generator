@@ -11,7 +11,7 @@ fetch('https://api.adviceslip.com/advice')
     .then(data => {
         console.log(data.slip)
         document.getElementById('advice-id').innerHTML = data.slip.id;
-        document.getElementById('advice-text').innerHTML = data.slip.advice;
+        document.getElementById('advice-text').innerHTML = `"${data.slip.advice}"`;
         }
     )
 }

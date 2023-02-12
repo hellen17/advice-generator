@@ -1,6 +1,52 @@
-.header{
-    background-color: #000;
-    color: red;
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+
+$font-stack: 'Manrope', sans-serif;
+$primary-color: hsl(193, 38%, 86%);
+$secondary-color: hsl(150, 100%, 66%);
+
+// Neutral
+$grayish-blue: hsl(217, 19%, 38%);
+$dark-grayish-blue: hsl(217, 19%, 24%);
+$dark-blue: hsl(218, 23%, 16%);
+
+body{
+    font-family: $font-stack;
+    background-color: $dark-blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+
+}
+
+.container{
+    background-color: $dark-grayish-blue;
+    color:  $primary-color;
     padding: 10px;
     text-align: center;
+    border-radius: 15px;
+   
+    .advice{
+        padding: 50px 10px 50px 10px;
+    }
+
+    .advice-title{
+        color: $secondary-color;
+        font-size: 0.8rem;
+    }
+    .advice-text{
+        font-weight: 800;
+        font-size: 28px;
+    }
+
+
 }
+
+@media screen and (min-width: 1024px) {
+    .container{
+        width: 50%;
+    }
+}
+    
+
