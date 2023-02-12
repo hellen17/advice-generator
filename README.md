@@ -1,7 +1,7 @@
 
 # Frontend Mentor - Advice generator app solution
 
-This is a solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db).
 
 ## Table of contents
 
@@ -50,31 +50,36 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Fetch function makes the API request, which returns a Promise that resolves with the API response.
 
-To see how you can add code snippets, see below:
+```javascript
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
+const getAdvice = () => {
+
+fetch('https://api.adviceslip.com/advice')
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Something went wrong');
+        }})
+    .then(data => {
+        console.log(data.slip)
+        document.getElementById('advice-id').innerHTML = data.slip.id;
+        document.getElementById('advice-text').innerHTML = `"${data.slip.advice}"`;
+        }
+    )
 }
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+getAdvice();
 ```
 
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Sass documentation](https://sass-lang.com/guide)
+- [Fetch API documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+- [CSS Positioning](https://www.youtube.com/watch?v=jx5jmI0UlXU)
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
