@@ -21,6 +21,8 @@ body {
 .container .advice-title {
   color: hsl(150deg, 100%, 66%);
   font-size: 0.8rem;
+  font-weight: 200;
+  letter-spacing: 4px;
 }
 .container .advice-text {
   font-weight: 800;
