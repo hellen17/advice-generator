@@ -27,12 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](https://user-images.githubusercontent.com/42536943/218305802-c4f7627d-b6c3-4a9a-9930-b31b07d6e00b.png)
 
 
 ### Links
 
-- [Solution URL](hLttps://www.frontendmentor.io/solutions/advice-generator-using-fetch-api-Q3qFM)
+- [Solution URL](https://www.frontendmentor.io/solutions/advice-generator-using-fetch-api-Q3qFM)
 - [Live Site URL](https://hellen17.github.io/advice-generator/)
 
 
